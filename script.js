@@ -170,7 +170,7 @@ const loadTranslations = (lang) => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     // Cargar reseñas aprobadas desde la función Netlify
-    fetch('/.netlify/functions/submitReview')
+    fetch('/.functions/submitReview')
         .then(response => response.json())
         .then(reviews => {
             const container = document.getElementById('approved-reviews-container');
@@ -218,7 +218,7 @@ document.getElementById('review-form').addEventListener('submit', async (event) 
     }
 
     function sendReview() {
-        fetch('/.netlify/functions/submitReview', {
+        fetch('/.functions/submitReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, rating, comment, photo: photoData }),
