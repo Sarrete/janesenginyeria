@@ -1,7 +1,7 @@
 
 [build]
   publish = "public"
-  functions = "/netlify/functions"
+  functions = "..netlify/functions"
 
 [dev]
-  functions = "/netlify/functions"
+  functions = "..netlify/functions"
