@@ -1,326 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pagina_titulo">Página de Trabajos de Ingeniería Mecánica</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valoraciones</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="menu-icon" id="menu-icon">   <!-- Icono del menú hamburguesa (a la izquierda) -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h1 titulo>JANÉS ENGINYERIA</h1>
-            <div class="language-selector-container">
-                <img src="images/icono.svg" alt="Select" id="language-icon">
-                <select id="language-selector" class="hidden">
-                    <option data-i18n="idioma_ca" value="ca">Catalan</option>
-                    <option data-i18n="idioma_es" value="es">Español</option>
-                    <option data-i18n="idioma_en" value="en">English</option>
-                </select>
-            </div>
-        </header>
- 
-       <!-- Menú lateral desplegable al hacer clic -->
-        <nav class="menu" id="menu">
-        <ul>
-            <li><a href="#mecanizado" data-i18n="menu_mecanizado">Trabajos de Mecanizado</a></li>
-            <li><a href="#impresion-3d" data-i18n="menu_impresion_3d">Trabajos de Impresión 3D</a></li>
-            <li><a href="#a-medida" data-i18n="menu_a_medida">Trabajos a Medida</a></li>
-            <li><a href="#valoracion" data-i18n="menu_valoracion">Valoraciones</a></li> <!-- Sección de valoración añadida -->
-            <li><a href="#contacto" data-i18n="menu_contacto">Contacto</a></li>
-        </ul>
-    </nav>
-    
-        <!-- Secciones de trabajos de mecanizados -->
-        <section class="work-section section-1" id="mecanizado">
-              <h2 data-i18n="trabajos_mecanizado">Trabajos de Mecanizado</h2>
-              <figcaption class="image-caption">
+  <header>
+    <h1>Deja tu valoración tío</h1>
+  </header>
 
-<h1 data-i18n="mecanizado_titulo" class="section-title">Precisión y calidad en cada proyecto de mecanizado.</h1>
+  <!-- Formulario de valoraciones -->
+  <section id="review-form">
+    <h2>Tu Opinión</h2>
+    <form id="submit-review">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
 
-    <div class="galeria">
-        <!-- Primera imagen -->
-        <figure class="image-container" data-images='["images/mecanizados/1/mecanizado1.jpg"]'>
-            <img src="images/mecanizados/1/mecanizado1.jpg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_1">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>
+      <label for="rating">Calificación:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+      </select>
 
-        <!-- Segunda imagen -->
-        <!-- <figure class="image-container" data-images='["images/imagen.jpeg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_2">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>-->
-                
-        <!-- Tercera imagen -->
-        <!--<figure class="image-container" data-images='["images/imagen.jpeg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_3">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>-->
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
 
-        <!-- Cuarta imagen -->
-        <!--<figure class="image-container" data-images='["images/imagen.jpeg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_4">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>-->
+      <label for="photo">Subir Foto (opcional):</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
 
-        <!-- Quinta imagen -->
-        <!--<figure class="image-container" data-images='["images/imagen.jpeg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_5">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>-->
-
-        <!-- Sexta imagen -->
-        <!-- <figure class="image-container" data-images='["images/imagen2.jpg", "images/imagen.jpEg"]' data-video="multimedia/video1.mp4">
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">   
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_6">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure>-->
-                
-        </section>
-
-        <!-- Seccion de trabajos 3d -->
-<section id="impresion-3d" class="work-section section-2">
-    <h2 data-i18n="trabajos_impresion_3d">trabajos de impresion 3d</h2>
-    <figcaption class="image-caption">
-    
-    <h1 data-i18n="impresion_descripcion" class="section-title">Innovación sin límites: tus diseños en 3D, materializados.</h1>
-    
-    <div class="galeria">
-        <!-- Septima imagen -->
-        <!--<figure class="image-container" data-images='["images/imagen2.jpg", "images/imagen.jpEg"]' data-video="multimedia/video1.mp4">
-            <img src="images/imagen.jpeg" alt="Impresión 3D de un modelo específico" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_7">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure> -->
-        
-        <!-- Octaba imagen -->
-        <figure class="image-container" data-images='["images/3d/1/imagen1.jpeg","images/3d/1/imagen2.jpeg"]' data-video="multimedia/3D/1/video1.mp4">
-            <img src="images/3d/1/imagen1.jpeg" alt="Otra pieza impresa en 3D" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_8">Otra pieza impresa en 3D.</figcaption>
-        </figure>
-        
-        <!-- 9 imagen -->
-        <!-- <figure class="image-container" data-images='["images/imagen.jpeg","images/imagen3.jpeg", "images/imagen4.jpg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de una pieza compleja" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_9">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure> -->
-
-        <!-- 10 imagen -->
-        <!-- <figure class="image-container" data-images='["images/imagen.jpeg","images/imagen3.jpeg", "images/imagen4.jpg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de una pieza compleja" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_10">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure> -->
-
-        <!-- 11 imagen -->
-        <!--  <figure class="image-container" data-images='["images/imagen.jpeg","images/imagen3.jpeg", "images/imagen4.jpg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de una pieza compleja" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_11">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure> -->
-
-        <!-- 12 imagen -->
-        <!-- <figure class="image-container" data-images='["images/imagen.jpeg","images/imagen3.jpeg", "images/imagen4.jpg"]'>
-            <img src="images/imagen.jpeg" alt="Impresión 3D de una pieza compleja" loading="lazy">
-            <figcaption class="image-caption" data-i18n="imagen_descripcion_12">Herramienta de apriete de tuerca KM.</figcaption>
-                </figure> -->
-    </div>
-</section>
-
-    <!-- Seccion de trabajos a medida -->
-        <section id="a-medida" class="work-section section-3">
-            <h2 data-i18n="trabajos_a_medida">Trabajos a Medida</h2>
-            <div class="content">
-            <figcaption class="image-caption">
-
-<head>
-    <title>Trabajos a Medida</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif; /* Cambia a la fuente que prefieras */
-            background-color: #f4f4f4;
-            color: #25d366;
-            line-height: 1.6;
-            padding: 20px;
-            margin: 0; /* Elimina márgenes por defecto */
-        }
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #ff6347; /* Color del título */
-            text-align: center; /* Centra el título */
-        }
-        .content {
-            background-color: #17db6075;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 0px;
-            margin-left: 20px; /* Centra el contenido horizontalmente */
-            margin-right: 20px; /* Centra el contenido horizontalmente */
-        }
-        ul {
-            padding-left: 20px;
-            list-style-type: disc; /* Asegura que los puntos se muestren */
-            list-style-position: inside; /* Alinea los puntos con el texto */
-            padding-left: 0; /* Remueve espacio adicional a la izquierda si es necesario */
-        }
-        li {
-            margin-bottom: 10px;
-            margin: 10px 0; /* Espaciado entre los elementos de la lista */
-            text-indent: 0; /* Asegura que no haya sangría en el texto */
-        }
-        .highlight {
-            font-weight: bold; /* Resalta el texto clave */
-            color: #FF6347; /* Color para resaltar */
-        }
-        .footer {
-            text-align: center; /* Centra el pie de página */
-            margin-top: 20px;
-            font-size: 0.9em; /* Tamaño de fuente más pequeño */
-            color: #666; /* Color gris para menos énfasis */
-        }
-    </style>
-</head>
-<body>
-
-<h1 data-i18n="descripcion_seccion_a_medida" class="section-title">Transformamos tus ideas en realidad</h1>
-
-
-    <p data-i18n="a_medida_parrafo_1">En <strong>Janés Enginyeria</strong> estamos contigo en cada paso.</p>
-    <p data-i18n="a_medida_parrafo_2">No solo te ayudamos a desarrollar tus proyectos, los llevamos al siguiente nivel. Desde la asesoría inicial, hasta la optimización y ejecución de cada detalle, nuestro equipo se enfoca en mejorar y materializar tus ideas de forma efectiva y creativa.</p>
-    
-    <ul>
-        <li><span class="highlight" data-i18n="a_medida_asesoramos_titulo">Asesoramos:</span> <span data-i18n="a_medida_asesoramos_desc">Te brindamos orientación experta, personalizada y adaptada a tus necesidades.</span></li>
-        <li><span class="highlight" data-i18n="a_medida_mejoramos_titulo">Mejoramos:</span> <span data-i18n="a_medida_mejoramos_desc">Identificamos oportunidades para optimizar cada aspecto de tu proyecto.</span></li>
-        <li><span class="highlight" data-i18n="a_medida_realizamos_titulo">Realizamos:</span> <span data-i18n="a_medida_realizamos_desc">Convertimos tus conceptos en realidad.</span></li>
-    </ul>
-    
-    <p data-i18n="a_medida_parrafo_3">Nos apasiona lo que hacemos y eso se nota en cada proyecto que tomamos. Juntos, creamos soluciones que impactan.</p>
-
-</div>
-</html>
-</figcaption>
-        </section>
-
-<!-- Sección de trabajos valoración -->
-<section id="valoracion" class="work-section section-4">
-    <h2 data-i18n="valoraciones.titulo">Valoraciones</h2>
-    <h4 data-i18n="valoraciones.dejaTuReseña">Deja tu Reseña</h4>
-    
-    <form id="review-form">
-        <label for="name" data-i18n="valoraciones.nombre">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="rating" data-i18n="valoraciones.calificacion">Calificación:</label>
-        <div id="rating">
-            <input type="radio" name="stars" value="1" id="star1" required>
-            <label for="star1" data-i18n="valoraciones.estrella1">⭐1</label>
-            <input type="radio" name="stars" value="2" id="star2">
-            <label for="star2" data-i18n="valoraciones.estrella2">⭐2</label>
-            <input type="radio" name="stars" value="3" id="star3">
-            <label for="star3" data-i18n="valoraciones.estrella3">⭐3</label>
-            <input type="radio" name="stars" value="4" id="star4">
-            <label for="star4" data-i18n="valoraciones.estrella4">⭐4</label>
-            <input type="radio" name="stars" value="5" id="star5">
-            <label for="star5" data-i18n="valoraciones.estrella5">⭐5</label>
-        </div>
-        
-        <label for="comment" data-i18n="valoraciones.comentario">Comentario:</label>
-        <textarea id="comment" name="comment" required></textarea>
-        
-        <label for="photo" data-i18n="valoraciones.foto">Foto (opcional):</label>
-        <input type="file" id="photo" name="photo" accept="image/*">
-        
-        <button type="submit" data-i18n="valoraciones.enviar">Enviar Reseña</button>
+      <button type="submit">Enviar</button>
     </form>
-    
-    <section id="approved-reviews-section">
-        <h4 data-i18n="valoraciones.reseñasClientes">Reseñas de Nuestros Clientes</h4>
-        <div id="approved-reviews-container">
-        </div>
-    </section>
-</section>
+  </section>
 
-<!-- Sección de contacto -->
-<section id="contacto" class="work-section section-5">
-    <h2 data-i18n="contacto_titulo">Contacto</h2>
-    <p data-i18n="contacto_parrafo">¿Listo para dar el siguiente paso? ¡Ponte en contacto con nosotros hoy mismo!</p>
-    
-<!-- Sección del Mapa -->
-<!-- <div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?p84.457091712801!2d2.1746946760694343!3d41.580993271275894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDM0JzUxLjYiTiAywrAxMCczOC4yIkU!5e0!3m2!1ses!2ses!4v1728974397053!5m2!1ses!2ses"
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div> -->
+  <!-- Valoraciones pendientes de aprobación -->
+  <section id="pending-reviews">
+    <h2>Valoraciones Pendientes</h2>
+    <div id="reviews-list"></div>
+  </section>
 
-        <!-- Sección de Información de Contacto -->
-        <div class="info-container">
-            <h3 data-i18n="contacto_parrafo_1">Contáctanos</h3>
-            
-         <!--   <div class="info-item">
-                <strong>Dirección:</strong>
-                <p>Janés Enginyeria<br>Avinguda mans<br>Barcelona</p>
-            </div> -->
-
-            <div class="info-item">
-                <strong data-i18n="contacto_correo">Correo:</strong> 
-                <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a>
-            </div>
-
-            <div class="info-item">
-                <strong data-i18n="contacto_telefono">Teléfono:</strong> 
-                <a href="tel:+12345">+12345</a>
-            </div>
-
-            <div class="info-item">
-                <a href="https://wa.me/+12345" class="whatsapp-button" data-i18n="contacto_whatsapp">Contactar por WhatsApp</a>
-            </div>
-        </div>
-    </div>
-</section>
-    </div>
-
-<div id="popup" class="popup">
-    <!-- Contenido del popup -->
-    <div class="popup-content">
-        <span id="close-popup">&times;</span>
-
-        <!-- Contenedor de la imagen -->
-        <img id="popup-image" alt="">
-        <figcaption id="popup-caption" class="photo-description"></figcaption>
-
-        <!-- Contenedor del video -->
-        <video id="popup-video" controls style="display:none;">
-            <source id="popup-video-source" src="" type="video/mp4">
-            <span data-i18n="popup_video_error">Tu navegador no soporta el video.</span>
-        </video>
-        <div id="popup-video-caption" class="video-description" style="display:none;"></div>
-
-        <!-- Flechas de navegación -->
-        <button id="prev" class="popup-arrow">&#10094;</button>
-        <button id="next" class="popup-arrow">&#10095;</button>
-    </div>
-</div>
-
-    <!-- Piñones laterales -->
-    <div class="gears-left" aria-hidden="true"></div>
-    <div class="gears-right" aria-hidden="true"></div>
-
-    <!-- Pie de página -->
-    <footer>
-        <p data-i18n="footer_texto">© 2024 JANÉS ENGINYERIA. Todos los derechos reservados.</p>
-        <img src="images/logo.png" alt="Logo" class="footer-logo">
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/script.js" defer></script>
+  <script src="./app.js"></script>
 </body>
 </html>
