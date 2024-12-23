@@ -1,7 +1,8 @@
-
 [build]
-  publish = "public"
-  functions = "..netlify/functions"
+functions = "functions"
+publish = "Valoraciones-web"
 
-[dev]
-  functions = "..netlify/functions"
+[[redirects]]
+from = "/functions/*"
+to = "/.netlify/functions/:splat"
+status = 200
